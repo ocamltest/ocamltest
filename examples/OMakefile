@@ -1,0 +1,27 @@
+# Targets not related to filenames.
+.PHONY: clean
+
+# Generate code that supports the thread library.
+# Treat all warnings as errors.
+OCAMLFLAGS = -thread -warn-error A
+
+# Look for dependencies in the 'main' directory.
+OCAMLINCLUDES += ../main/
+
+# This program depends on the ocamltest library.
+OCAML_LIBS += ../main/ocamltest
+
+# This program also depends on the unix and threads standard libraries.
+OCAML_OTHER_LIBS += unix threads
+
+# The instructions to build the test.
+# (TEST = the resulting filename(s))
+TEST = $(OCamlProgram test, example example_test)
+
+# Build and run the test by default.
+.DEFAULT: $(TEST)
+  ./$<
+
+# Delete the program and other intermediate files.
+clean:
+  rm -f $(TEST) *.{cmi,cmx,o,omc}
