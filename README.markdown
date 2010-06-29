@@ -1,10 +1,10 @@
-ocamltest
+OCamlTest
 =========
-This is a small unit test framework for OCaml.
+A framework for writing repeatable tests in the OCaml programming language.
 
 Building pre-requisites
 -----------------------
-ocamltest requires OMake and ocamlfind to build. You can install both with
+OCamlTest requires OMake and ocamlfind to build. You can install both with:
 
     sudo aptitude install omake ocaml-findlib
 
@@ -30,7 +30,7 @@ To remove the installed ocamltest OCaml package, run:
 
     sudo omake uninstall
 
-Using ocamltest
+Using OCamlTest
 ---------------
 When compiling your OCaml project, use ocamlfind with the directive
 '-package ocamltest', like this:
