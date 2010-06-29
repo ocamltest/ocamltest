@@ -29,7 +29,7 @@ install: $(LIB_FILES) META
 # Uninstall the library from the default location.
 # (Default location is `ocamlfind printconf destdir`.)
 uninstall:
-  ocamlfind remove ocamltest
+  ocamlfind remove $(LIB_NAME)
 
 # Only build (do not install) the library by default.
 .DEFAULT: $(LIB_FILES)
