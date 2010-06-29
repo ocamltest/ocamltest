@@ -4,12 +4,13 @@ This is a small unit test framework for OCaml.
 
 Building pre-requisites
 -----------------------
-ocamltest requires OMake to build. You can install OMake with
+ocamltest requires OMake and ocamlfind to build. You can install both with
 
-    sudo aptitude install omake
+    sudo aptitude install omake ocaml-findlib
 
-on Ubuntu. Otherwise, refer to the
-[OMake homepage](http://omake.metaprl.org/index.html).
+on Ubuntu. For other operating systems, please refer to the
+[OMake homepage](http://omake.metaprl.org/index.html) and
+the [Findlib homepage](http://projects.camlcity.org/projects/findlib.html).
 
 Building instructions
 ---------------------
@@ -19,10 +20,15 @@ Run omake in the directory of this README file:
 
 Installation
 ------------
-To use the package in your OCaml projects, install ocamltest by running the
-following command:
+To use the package in your OCaml projects, install ocamltest by running:
 
     sudo omake install
+
+Un-installing
+-------------
+To remove the installed ocamltest OCaml package, run:
+
+    sudo omake uninstall
 
 Using ocamltest
 ---------------
