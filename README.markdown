@@ -20,13 +20,13 @@ Run omake in the directory of this README file:
 
 Installation
 ------------
-To use the package in your OCaml projects, install ocamltest by running:
+To use the package in your OCaml projects, install OCamlTest by running:
 
     sudo omake install
 
-Un-installing
+Uninstalling
 -------------
-To remove the installed ocamltest OCaml package, run:
+To remove the installed OCamlTest OCaml package, run:
 
     sudo omake uninstall
 
