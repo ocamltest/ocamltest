@@ -1,5 +1,5 @@
 # Targets not related to filenames.
-.PHONY: clean
+.PHONY: test clean
 
 # Generate code that supports the thread library.
 # Treat all warnings as errors.
@@ -18,9 +18,12 @@ OCAML_OTHER_LIBS += unix threads
 # (TEST = the resulting filename(s))
 TEST = $(OCamlProgram test, example example_test)
 
-# Build and run the test by default.
-.DEFAULT: $(TEST)
+# Build and run the test.
+test: $(TEST)
   ./$<
+
+# Build and run the test by default.
+.DEFAULT: test
 
 # Delete the program and other intermediate files.
 clean:
