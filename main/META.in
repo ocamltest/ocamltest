@@ -1,4 +1,5 @@
 version = "@VERSION@"
 description = "OCaml Unit Test Framework"
 requires = ""
+archive = "ocamltest.cma"
 archive(native) = "ocamltest.cmxa"
